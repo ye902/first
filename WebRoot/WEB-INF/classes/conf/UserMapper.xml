@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserMapper">
+
+	<resultMap type="model.User" id="userResult">
+		<id column="Uid" property="userid" />
+		<result column="usename" property="username" />
+		<result column="pwd" property="userpwd" />
+	</resultMap>
+	<select id="findUser" resultMap="userResult" parameterType="model.User">
+		select * from test.usermanager where Uid=#{userid} and pwd=#{userpwd}
+	</select>
+	
+	<select id="findUserByPage" resultMap="userResult" parameterType="int">
+		select * from test.usermanager order by test.usermanager.Uid desc limit #{start},5;
+	</select>
+	
+	<select id="selectUserCount" resultType="int">
+		select count(*) from test.usermanager;
+	</select>
+	
+	<insert id="insertUser" parameterType="model.User">
+		insert into
+		test.usermanager(Uid,usename,pwd)
+		values(#{userid},#{username},#{userpwd});
+	</insert>
+	<delete id="deleteUserById" parameterType="model.User">
+		delete from test.usermanager where Uid=#{userid}
+	</delete>
+	<delete id="deleteUserByIds" parameterType="java.util.List">
+		delete from test.usermanager
+	  	<where>
+	  		<foreach collection="uids" item="uids" open="and Uid in (" close=")" separator=",">
+		   		#{uids}
+			</foreach>
+	  	</where>
+	</delete>
+	
+	<update id="updatePwdById" parameterType="model.User">
+		update graduate.usermanager set pwd=#{userpwd} where Uid=#{userid}
+	</update>
+</mapper>

@@ -1,0 +1,132 @@
+create table test.userManager(
+	Uid int(10) not null,
+   usename varchar(50) not null,
+   pwd varchar(50) not null,
+    primary key(Uid)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+insert into test.usermanager(Uid,usename,pwd)values(220449888,'大大丰','zzx1235');
+insert into test.usermanager(Uid,usename,pwd)values(220449339,'安文丰','zzx1232');
+insert into test.usermanager(Uid,usename,pwd)values(220449399,'的','zzx1233');
+insert into test.usermanager(Uid,usename,pwd)values(220442344,'调查','zzx1433');
+insert into test.usermanager(Uid,usename,pwd)values(220239344,'但是热','zzx1233');
+insert into test.usermanager(Uid,usename,pwd)values(220432244,'的方法','zfx1233');
+insert into test.usermanager(Uid,usename,pwd)values(221449344,'对方的','zzx7833');
+insert into test.usermanager(Uid,usename,pwd)values(220122344,'饿密码','zz56233');
+insert into test.usermanager(Uid,usename,pwd)values(220049349,'测试账号1','zz56233');
+insert into test.usermanager(Uid,usename,pwd)values(220469349,'测试账号2','zz56233');
+insert into test.usermanager(Uid,usename,pwd)values(220049340,'测试账号3','zz56233');
+
+
+create table test.usercomment(
+	Uid int(10) not null,
+    C_id int(10) not null auto_increment,
+    C_text varchar(500),
+    C_date datetime,
+    C_good int(10),
+    primary key(C_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220449888,'2018/03/01',
+"秦时明月的话不是直接来自历史故事的，直接来源的话应当是台湾作家的小说故事，不过变动很大。 有说画面的盆友，其实这是好几年前的了，最近的连载的进步很显著的画风什么的已经达到相当唯美的程度了。而且这部动画的话应该不是走最终幻想风格的，走的是仙剑游戏这样的魔幻水墨纯美风呢，。简直是喜欢死了，话说一直不想在网上看国产动漫来着，最近网购的正版片子就要到了，支持国产，激动ing！！！！！话说京东买的仙剑也快到了，今年过年要幸福死了～",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220449888,'2018/03/01',
+"我我去年白看了，居然现在来个难关。去年白看了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220449339,'2018/03/01',
+"没有用户信息的评论会出现吗？",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220449339,'2018/03/01',
+"没有用户信息的评论不会出现？",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220449339,'2018/03/01',
+"没有用户信息的评论不会出现？",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(221449344,'2018/03/01',
+"这是我唯一喜欢的动漫 第一部开始 十几年了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(221449344,'2018/03/01',
+"我我去年白看了，居然现在来个难关。去年白看了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220432244,'2018/03/01',
+"这是我唯一喜欢的动漫 第一部开始 十几年了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220432244,'2018/03/01',
+"我觉得大家讨厌农家乐有一部分原因是大多数月饼都有自己喜欢的角色。而农家乐的人物都是新角色，一时间难以和积累了几季粉丝的老角色pk。就剧情而言，农家乐篇真的不错。而且让我更了解了期末有哪些历史人物，从而也激发了我爱好先秦文化的热情",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220449888,'2018/03/01',
+"这是我唯一喜欢的动漫 第一部开始 十几年了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220432244,'2018/03/01',
+"我我去年白看了，居然现在来个难关。去年白看了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220049340,'2018/03/01',
+"这是我唯一喜欢的动漫 第一部开始 十几年了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220049340,'2018/03/01',
+"我我去年白看了，居然现在来个难关。去年白看了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220122344,'2018/03/01',
+"019.12.26新年来临之际重温第三部",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220122344,'2018/03/01',
+"我我去年白看了，居然现在来个难关。去年白看了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220122344,'2018/03/01',
+"这只喜欢看端木蓉 发现没有多少出厂啊
+了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220122344,'2018/03/01',
+"又看一次",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220122344,'2018/03/01',
+"这是我唯一喜欢的动漫 第一部开始 十几年了",
+1232);
+insert into test.usercomment(Uid,c_date,c_text,c_good) values(220122344,'2018/03/01',
+"嬴政戏份好少",
+1232);
+create table test.imgManager(
+imgId int(50) not null auto_increment,
+	src varchar(100) not null,
+	author varchar(50) not null,
+	create_date date,
+	num int(50),
+    primary key(imgId)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+insert into test.imgManager(src,author,create_date,num) values ("26.jpg","太郎",'2019/03/22',123);
+insert into test.imgManager(src,author,create_date,num) values ("27.jpg","xiaotaio",'2019/05/12',1563);
+insert into test.imgManager(src,author,create_date,num) values ("29.jpg","筱筱",'2019/03/26',5663);
+insert into test.imgManager(src,author,create_date,num) values ("83.jpg","小哈就",'2019/03/12',454);
+insert into test.imgManager(src,author,create_date,num) values ("30.jpg","成本撒阿萨",'2019/09/12',765);
+insert into test.imgManager(src,author,create_date,num) values ("38.jpg","石帆胜丰",'2019/06/12',5643);
+insert into test.imgManager(src,author,create_date,num) values("43.jpg","大范甘迪",'2019/08/12',655);
+insert into test.imgManager(src,author,create_date,num) values ("51.jpg","大范甘迪",'2019/03/12',655);
+insert into test.imgManager(src,author,create_date,num) values("52.jpg","大范甘迪",'2019/03/16',655);
+insert into test.imgManager(src,author,create_date,num) values("50.jpg","大范甘迪",'2019/03/19',655);
+	insert into test.imgManager(src,author,create_date,num) values("53.jpg","甘迪",'2019/03/12',655);
+	insert into test.imgManager(src,author,create_date,num) values ("56.jpg","大甘迪",'2019/03/12',655);
+	insert into test.imgManager(src,author,create_date,num) values ("57.jpg","大范甘迪",'2019/03/10',655);
+	insert into test.imgManager(src,author,create_date,num) values ("58.jpg","大范甘迪",'2019/03/12',655);
+	insert into test.imgManager(src,author,create_date,num) values ("59.jpg","大范",'2018/04/11',655);
+	insert into test.imgManager(src,author,create_date,num) values ("60.jpg","迪",'2018/03/11',655);
+	insert into test.imgManager(src,author,create_date,num) values ("61.jpg","大范甘迪",'2018/03/09',655);
+	insert into test.imgManager(src,author,create_date,num) values ("62.jpg","大范",'2018/03/21',655);
+	insert into test.imgManager(src,author,create_date,num) values ("63.jpg","迪",'2018/03/11',655);
+	insert into test.imgManager(src,author,create_date,num) values ("64.jpg","大范甘迪",'2018/03/01',655);
+	insert into test.imgManager(src,author,create_date,num) values ("65.jpg","大范",'2018/02/11',655);
+	insert into test.imgManager(src,author,create_date,num) values ("66.jpg","迪",'2018/04/11',655);
+	insert into test.imgManager(src,author,create_date,num) values ("67.jpg","大范甘迪",'2018/03/11',655);
+	insert into test.imgManager(src,author,create_date,num) values ("68.jpg","大范",'2018/03/16',655);
+	insert into test.imgManager(src,author,create_date,num) values ("69.jpg","迪",'2018/03/11',655);
+	insert into test.imgManager(src,author,create_date,num) values ("70.jpg","大范甘迪",'2018/05/11',655);
+insert into test.imgManager(src,author,create_date,num) values ("71.jpg","大范",'2018/07/11',655);
+insert into test.imgManager(src,author,create_date,num) values ("72.jpg","迪",'2018/09/11',655);
+insert into test.imgManager(src,author,create_date,num) values ("73.jpg","大范甘迪",'2018/03/06',655);
+insert into test.imgManager(src,author,create_date,num) values ("74.jpg","大范",'2018/08/06',55);
+    insert into test.imgManager(src,author,create_date,num) values ("75.jpg","迪",'2018/03/11',655);
+create table test.adminManage(
+adminId varchar(50) not null,
+adminPwad varchar(50) not null,
+    primary key(adminId)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+insert into test.adminManage(adminId,adminPwad) values('Admin','root');
+
+

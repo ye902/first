@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.AdminMapper">
+
+	<resultMap type="model.Admin" id="adminResult">
+		<id column="adminId" property="adminId" />
+		<result column="adminPwad" property="adminPwd" />
+	</resultMap>
+	<select id="loginAdmin" resultMap="adminResult" parameterType="model.Admin">
+		select * from test.adminmanage where adminId=#{adminId} and adminPwad=#{adminPwd}
+	</select>
+	
+	<select id="findAdminByPage" resultMap="adminResult" parameterType="int">
+		select * from test.adminmanage order by test.adminmanage.adminId desc limit #{start},5;
+	</select>
+	
+	<select id="selectAdminCount" resultType="int">
+		select count(*) from test.adminmanage;
+	</select>
+	
+	<delete id="deleteAdminById" parameterType="model.Admin">
+		delete from test.adminmanage where adminId=#{adminId}
+	</delete>
+	<delete id="deleteAdminByIds" parameterType="java.util.List">
+		delete from test.adminmanage
+	  	<where>
+	  		<foreach collection="adids" item="adids" open="and adminId in (" close=")" separator=",">
+		   		#{adids}
+			</foreach>
+	  	</where>
+	</delete>
+	
+	<insert id="insertAdmin">
+		insert into test.adminmanage(adminId,adminPwad)values(#{adminId},#{adminPwd})
+	</insert>
+	<update id="updatePwdById" parameterType="model.Admin">
+		update test.adminmanage set adminPwad=#{adminPwd} where adminId=#{adminId}
+	</update>
+</mapper>

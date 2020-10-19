@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.ImageMapper">
+
+	<resultMap type="model.Image" id="ImageResult">
+		<id column="imgId" property="imgId" />
+		<result column="src" property="src" />
+		<result column="author" property="author" />
+		<result column="create_date" property="date" />
+		<result column="num" property="num" />
+	</resultMap>
+	<select id="selectAllImage" resultMap="ImageResult">
+		select * from test.imgManager
+	</select>
+	
+	<select id="findImageByPage" resultMap="ImageResult" parameterType="int">
+		select * from test.imgManager order by test.imgManager.imgId desc limit #{start},5;
+	</select>
+	
+	<select id="selectImageCount" resultType="int">
+		select count(*) from test.imgManager
+	</select>
+	
+	<delete id="deleteImageById" parameterType="model.Image">
+		delete from test.imgManager where imgId=#{imgId}
+	</delete>
+	<delete id="deleteImageByIds" parameterType="java.util.List">
+		delete from test.imgManager
+	  	<where>
+	  		<foreach collection="imgids" item="imgids" open="and imgId in (" close=")" separator=",">
+		   		#{imgids}
+			</foreach>
+	  	</where>
+	</delete>
+	
+	
+</mapper>

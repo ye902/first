@@ -1,0 +1,283 @@
+.contain{
+	
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     background-image: url(../image/body_bg.jpg);
+     background-size: 100% 300px;
+     background-repeat: no-repeat;
+     background-color: #f7f7f7;
+}
+.cos_title{
+     margin: 50px 0px;
+}
+h1{
+	margin:50px 0;
+}
+.chat_title ul{
+	width: 90%;
+	margin:0 auto;
+	/*border: 1px solid #ccc;*/
+	display: flex;
+	flex-direction: normal;
+	justify-content: flex-start;
+}
+.chat_title li{
+
+	text-align: left;
+}
+
+.chat_title a{
+	color: #000;
+}
+.video{
+	width: 90%;
+	height: 8%;
+	
+	display: flex;
+	justify-content: space-between;
+}
+.left{
+	flex: 2;
+}
+.right{
+	flex: 1;	
+}
+.video video{
+	width: 100%;
+	
+
+}
+video:focus{
+	outline: none;
+}
+
+.intro{
+	margin-top: 10%;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	box-shadow: 0px 0px 4px 0px #ccc;
+	/*padding: 20px;*/
+
+}
+.intro .sImg{
+	flex: 1;
+}
+.intro img{
+	width: 100%;
+	height: auto;
+	
+
+}
+.intro .detail_intro{
+	flex: 3;
+	/*border:1px solid blue;*/
+
+}
+.intro .detail_intro p{
+	text-align: left;
+	margin-left: 6%;
+	line-height: 24px; 
+	font-size: 12px;
+	color:#666;
+}
+.left .viewChat{
+	margin-top: 4%;
+	margin-bottom:20%; 
+	width: 100%;
+	 
+}
+.viewChat .newComment{
+
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	
+	
+}
+.viewChat .v_left,.others_view .ov_left{
+	
+	 width: 60px;
+	 height: 60px;
+	 background: #e5e9ef;
+	 /*border:1px solid blue;*/
+	  border-radius: 60px;
+}
+.viewChat #ulbtn{
+	
+}
+.viewChat #li_btn{
+	border:1px solid #669999;
+	background:#f7f7f7;
+	line-height:30px;
+	width:30px;
+	margin-left:20px;
+	float:left;
+}
+.viewChat .v_left img,.others_view .ov_left img{
+	
+	width: 100%;
+	height: 100%;
+	 border-radius: 60px;
+}
+.ov_right h4{
+	margin-bottom: 4%;
+}
+.viewChat .v_middle{
+	
+	flex: 1;
+	/*border:1px solid blue;*/
+}
+.viewChat .v_middle textarea{
+	width: 94%;
+	height: 64px;
+	background: #e5e9ef;
+	border-style: none;
+	overflow: hidden;
+	outline:none;
+}
+.viewChat .v_right{
+	/*width: 60px;*/
+	 height: 62px;
+	/*border:1px solid blue;*/
+}
+.v_right button{
+	width: 100%;
+	height: 100%;
+	background:#669999;
+	padding: 4px;
+	font-size: 14px;
+	color: #f7f7f7;
+	text-align: center;
+	border-style: none;
+	outline:none;
+}
+.others_view{
+	min-height:300px;
+	margin-top: 4%;
+}
+.others_view ul li{
+	margin-top:4%;
+	display: flex;
+	flex-direction: row;
+	
+	
+}
+.others_view .ov_right{
+	margin: 0 auto;
+	border-bottom:2px solid #e5e9ef;
+	flex:1;
+	padding: 10px;
+	text-align:justify;
+}
+.right{
+	flex: 1;
+	/*width: 100%;*/
+	/*margin: 0 auto;*/
+	/*border:1px solid #ccc;*/
+}
+
+.video_tab{
+	width: 100%;
+	/*margin-top:20px;	 */
+	margin-bottom: 40px;
+	/*height: 52%;*/
+	background:#e5e9ef;
+
+}
+.video_tab>ul{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 6%;
+	/*justify-content: space-between;*/
+
+
+}
+
+.video_tab>ul li{
+	margin-bottom: 20px;
+
+	margin-right: 2%;
+	padding: 5px 5px;
+	color: #669999;
+	border: 1px solid #669999;
+	border-radius: 5px;
+}
+.rec{
+	width: 100%;
+	/*background: #e5e9ef;*/
+}
+.recvideo_box li{
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex;
+	flex-flow: row;
+	/*border: 1px solid blue;*/
+	
+}
+.rec_video{
+	width: 36%;
+	margin-left: 6%;
+	/*height: auto;*/
+}
+.rec_video a{
+	display: block;
+	
+	
+}
+.rec_video img{
+	display: block;
+	width: 100%;
+}
+.rec_info{
+	flex:1;
+	padding-left: 4%;
+	text-align: left;
+	color: #669999;
+	/*border: 1px solid blue;*/
+	display: flex;
+	flex-direction: column;
+}
+.rec_info a{
+	flex: 1;
+}
+
+.rec_info p{
+	font-size: 14px;
+	align-self: flex-end;
+}
+.rec_article{
+		width: 100%;
+		
+		text-align: left;
+		/*border: 1px solid #669999;*/
+}
+.rec_article ul{
+	padding-left: 30px;
+	margin: auto;
+	/*border: 1px solid #669999;*/
+}
+.rec_article ul li::before{
+	content:"*";
+	color: #666;
+	font-size: 20px;
+
+}
+.rec_article li a{
+	color: #666;
+	font-size: 14px;
+}
+.playing{
+	background:#669999;
+	
+}
+#delbtn{
+	margin-top:4%;
+	font-size:12px;
+	color:#999;
+	border-style:none;
+	outline:none;
+}

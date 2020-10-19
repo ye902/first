@@ -1,0 +1,115 @@
+	
+	
+
+	/***header*****/
+
+	
+	
+
+	/*.header_link{
+
+	}*/
+
+/****container******/
+	.container{
+	margin:auto;
+		width:90%;
+		flex: 1;
+		display: flex;
+		
+		align-items: center;
+		
+	}
+	.container_bag{
+		
+		
+		width:66%;
+		
+		
+		
+	}
+	.container_bag .sentence{
+		
+		width:60%;
+	
+		margin:0 left;
+	}
+	.container_bag .sentence p{
+		margin:0 auto;
+		width:80%;
+		line-height: 36px;
+		color:#669999;
+		
+	}
+	
+	.box{
+		flex:1;
+		margin-right:6%;
+		width:48%;
+		height: 400px;
+		border: 1px solid #669999;
+
+	}
+	
+
+/****form*****/
+	.tab{
+		display: flex;
+		text-align: center;
+		border-bottom: 1px solid #669999;
+	}
+	/*点击增加背景颜色*/
+	.tabColor{
+		background-color:#669999; 
+		color:#f7f7f7;
+
+	}
+
+	.login{
+		
+		border-right: 1px solid #ccc;
+		/*background-color:#99CCFF; */
+	}
+	
+	.login,.registe{
+		
+		flex: 1;
+		padding: 10px;
+	}
+	.content{
+		margin-top: 50px;
+		text-align: center;
+		/*border:1px solid #cfa;*/
+	}
+	
+	.login_item,.login_btn,.registe_item,.registe_btn{
+		margin-top: 40px;
+	}
+	.login_btn,.registe_btn{
+		display: flex;
+	}
+
+	.login_submit,.registe_submit{
+		flex: 1;
+	}
+	
+	button{
+		width: 60%;
+		padding: 10px;
+		font-size: 16px;
+		background-color: #669999;
+		color:#f7f7f7;
+		outline:none;
+		border:none;
+	}
+	input{
+		width: 50%;
+		padding: 5px;
+		border:1px solid #669999;
+	}
+	.footer{
+		width: 100%;
+		text-align: center;
+		line-height: 38px;
+		background-color: #669999
+	}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CommentMapper">
+
+	<resultMap type="model.Comment" id="commentResult">
+		<id column="C_id" property="c_id" />
+		<result column="Uid" property="Uid" />
+		<result column="c_good" property="goodNum" />
+		<result column="c_date" property="c_date" />
+		<result column="c_text" property="c_text" />
+		<association property="user" javaType="model.User">
+			<id column="Uid" property="userid" />
+			<result column="usename" property="username" />
+		</association>
+	</resultMap>
+	<select id="selectAllComment" resultMap="commentResult"
+		parameterType="int">
+		select * from test.usercomment
+		order by c_date desc,c_id desc  limit #{start},5;
+	</select>
+	<select id="findPage" resultMap="commentResult" parameterType="int">
+		select uc.*,uc.c_date,um.usename,um.Uid from test.usercomment
+		uc,test.usermanager um where uc.Uid = um.Uid order by uc.c_date desc,c_id desc  limit #{start},10;
+	</select>
+	<select id="selectCount" resultType="int">
+		select count(*) from test.usercomment;
+	</select>
+
+	<insert id="insertComment" parameterType="model.Comment">
+		insert into
+		test.usercomment(Uid,C_text,C_date,C_good)
+		values(#{Uid},#{c_text},#{c_date},#{goodNum});
+	</insert>
+	<delete id="deleteCommentById">
+		delete from test.usercomment where Uid=#{Uid} and
+		C_id=#{C_id}
+	</delete>
+	
+	<delete id="deleteCommentByIds" parameterType="java.util.List">
+		delete from test.usercomment
+	  	<where>
+	  		<foreach collection="ids" item="ids" open="and C_id in (" close=")" separator=",">
+		   		#{ids}
+			</foreach>
+	  	</where>
+	</delete>
+	
+	<delete id="deleteNoUser">
+		delete from test.usercomment where usercomment.Uid not in (select usermanager.Uid from test.usermanager )
+	</delete>
+</mapper>

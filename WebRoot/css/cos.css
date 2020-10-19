@@ -1,0 +1,112 @@
+.contain{
+
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     background-image: url(../image/body_bg.jpg);
+
+     background-size: 100% 300px;
+     background-repeat: no-repeat;
+     background-color: #f7f7f7;
+}
+.cos_title{
+     margin: 50px 0px;
+}
+#cos_symbol{
+     width: 100%;
+    
+}
+#cos_symbol #sym_box{
+        width: 86%;
+        margin:50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: #669999;
+}
+#cos_symbol  #sym_img{
+        flex:2;
+        margin: 2% 1%;
+        padding: 0 0; 
+       border: 1px solid #ccc; 
+       box-shadow: 0 0 5px #ccc; 
+       border-radius: 5px;
+}
+#sym_img a{
+	margin:5px auto;
+	display:block;
+	width:300px; 
+}
+#cos_symbol img{
+	display:block;
+       width:300px; 
+       height: auto; 
+}
+.cos_tab{
+
+        width: 91%;
+        display: flex;
+        justify-content: flex-end;
+        
+}
+.cos_tab ul{
+        width: 16%;
+        display: flex;
+        margin: 10px 0;
+        justify-content: space-between;
+
+        
+}
+.cos_tab li{
+
+        width: 100%;
+        margin-left: 6%;
+        color: #669999;
+        border: 1px solid #669999;
+        line-height: 36px;
+        
+}
+#img_container{ 
+     height: 98%;
+     position: relative; 
+} 
+
+.box{ 
+	/*min-height: 16%;*/
+       padding: 5px; 
+       float: left; 
+} 
+.box_img{ 
+       padding: 20px; 
+       border: 1px solid #ccc; 
+       box-shadow: 0 0 5px #ccc; 
+       border-radius: 5px; 
+}
+
+.box_img:after,.box_img:before{
+       content: " ";
+       display: table;
+}
+.box_img:after{
+       clear: both;
+}
+.box_img p{
+       text-align: left;
+       color: #669999;
+       line-height: 20px;
+}
+.box_img span{
+       font-size: 14px;
+       color: #669999;
+}
+.box_img .intro_date{
+       float: left;
+
+}
+.box_img .intro_click{
+       float: right;
+}
+.box_img img{ 
+       width: 300px; 
+       height: auto; 
+}
